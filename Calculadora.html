@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora científica</title>
+    <link rel="stylesheet" href="Calculadora.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <input type="text" id="display" placeholder="0">
+        <div class="buttons">
+            <button onclick="appendToDisplay('+')" title="Suma">+</button>
+            <button onclick="appendToDisplay('-')" title="Resta">-</button>
+            <button onclick="appendToDisplay('*')" title="Multiplicación">×</button>
+            <button onclick="appendToDisplay('/')" title="División">÷</button>
+            <button onclick="sqrt()" title="Raiz cuadrada">√</button>
+            <button onclick="appendToDisplay('**')" title="Potencia">^</button>
+            <button onclick="trigFunction('sin')" title="Seno">sin</button>
+            <button onclick="trigFunction('cos')" title="Coseno">cos</button>
+            <button onclick="trigFunction('tan')" title="Tangente">tan</button>
+            <button onclick="logFunction()" title="Logaritmos">log</button>
+            <button onclick="factorial()" title="Factorial">n!</button>
+            <button onclick="calculate()" title="Resultado" id="res">=</button>
+            <button onclick="clearDisplay()">C</button>
+        </div>
+        <select id="rounding">
+            <option value="none">Sin redondeo</option>
+            <option value="ceil">Ceil</option>
+            <option value="floor">Floor</option>
+            <option value="round">Round</option>
+        </select>
+        <label><input type="checkbox" id="absolute">Valor absoluto</label>
+    </div>
+
+    <script src="Calculadora.js"></script>
+</body>
+</html>
